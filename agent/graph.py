@@ -1,24 +1,19 @@
 from langgraph.graph import StateGraph, END, START
 from langgraph.graph.message import add_messages
 from langchain_core.tools import tool
-from typing import TypedDict, Annotated, List, Literal, Optional
-from langgraph.prebuilt import ToolNode
-from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, AIMessage, ChatMessage
-from langchain_core.messages import AnyMessage, ToolMessage, AIMessage
-from langgraph.checkpoint.memory import MemorySaver
+from typing import TypedDict, Annotated, Literal
+from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.messages import ToolMessage
 from dotenv import load_dotenv
 import os
 from tavily import TavilyClient
-from langchain_tavily import TavilySearch
 from langchain_openai import ChatOpenAI
-from langgraph.graph import StateGraph, END
-from tavily import TavilyClient
-from prompt.ppp import RESEARCH_BEF_PLAN, PLAN_PROMPT, REFLECT_PROMPT, one_PLAN_PROMPT
+from prompt.ppp import one_PLAN_PROMPT
 from .state import AgentState
 from langchain_google_genai import ChatGoogleGenerativeAI
 import json
 
-# Load environment variables
+# Load environment variablesc
 load_dotenv()
 
 # Setup clients

@@ -1,13 +1,10 @@
 import os
 from dotenv import load_dotenv
-load_dotenv()
 import logging
 import json
-from typing import Dict, Any, Optional
 
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
-from mcp.types import Resource, Tool, TextContent
 from mysql.connector import connect, Error
 
 logging.basicConfig(
@@ -17,6 +14,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("mysql_mcp_server")
 
+load_dotenv()
 mcp = FastMCP("mysql_mcp_server")
 
 DB_CONFIG = {
