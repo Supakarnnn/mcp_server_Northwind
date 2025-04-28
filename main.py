@@ -49,7 +49,7 @@ async def chat(chatmessage: RequestMessage):
             async with MultiServerMCPClient(
                 {
                     "db": {
-                        "url": "http://localhost:8000/sse",
+                        "url": "http://localhost:8080/sse",
                         "transport": "sse",
                     }
                 }
@@ -107,7 +107,7 @@ async def create_report(request: RequestMessage):
             async with MultiServerMCPClient(
                 {
                     "db": {
-                        "url": "http://localhost:8000/sse",
+                        "url": "http://localhost:8080/sse",
                         "transport": "sse",
                     }
                 }

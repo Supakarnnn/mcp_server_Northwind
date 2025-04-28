@@ -137,3 +137,5 @@ async def list_available_tools():
 
 if __name__ == "__main__":
     mcp.run(transport='sse')
+
+    ##fastmcp run mcp_server.py:mcp --transport sse --port 8080 --host 0.0.0.0
